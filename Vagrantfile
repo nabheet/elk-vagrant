@@ -100,8 +100,8 @@ enabled=1" > "/etc/yum.repos.d/kibana.repo"
             s/^.*cluster.name:.*$/cluster.name: elk-vagrant/;
             s/^.*node.name:.*$/node.name: elk-vagrant-01/;" /etc/elasticsearch/elasticsearch.yml
 
-    chkconfig --add elasticsearch
-    chkconfig --add kibana
+    chkconfig elasticsearch on
+    chkconfig kibana on
     service elasticsearch start
     service kibana start
   SHELL
